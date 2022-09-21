@@ -19,17 +19,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 
-/* Use I2C or Serial, not both */
-
-#define USE_SERIAL
-// #define USE_I2C
-
-/* Select hand configuration */
-
-//#define MASTER_LEFT
-// #define MASTER_RIGHT
-#define EE_HANDS
-
 // Configure the global tapping term (default: 200ms)
 #undef TAPPING_TERM
 #define TAPPING_TERM 200
@@ -43,9 +32,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define TAPPING_FORCE_HOLD
 #define TAPPING_FORCE_HOLD_PER_KEY
-
-#undef DIODE_DIRECTION
-#define DIODE_DIRECTION ROW2COL
 
 // Automatically switch to NKRO.
 #define FORCE_NKRO
