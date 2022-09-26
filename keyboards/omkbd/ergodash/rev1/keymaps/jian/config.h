@@ -36,11 +36,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #undef TAPPING_TERM
 #define TAPPING_TERM 200
 
+// Enable tapping term per key
+#define TAPPING_TERM_PER_KEY
+
 // Prevent normal rollover on alphas from accidentally triggering mods.
 #define IGNORE_MOD_TAP_INTERRUPT
 
+/* Enables This makes it easier for fast typists to use dual-function keys */
+// Don't work with home row mods.
+#ifdef PERMISSIVE_HOLD
+#undef PERMISSIVE_HOLD
+#endif
+
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define TAPPING_FORCE_HOLD
+#define TAPPING_FORCE_HOLD_PER_KEY
 
-// Automatically switch NKRO on.
+// Automatically switch to NKRO.
 #define FORCE_NKRO
