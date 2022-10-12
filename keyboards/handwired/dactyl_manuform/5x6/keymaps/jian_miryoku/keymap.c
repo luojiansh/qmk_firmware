@@ -1,4 +1,24 @@
 #include QMK_KEYBOARD_H
+#include "keymap_steno.h"
+
+enum custom_keycodes {
+  LLOCK = SAFE_RANGE,
+  // Other custom keys...
+};
+
+#include "features/layer_lock.h"
+
+bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+  if (!process_layer_lock(keycode, record, LLOCK)) { return false; }
+  // Your macros ...
+
+  return true;
+}
+
+void matrix_scan_user(void) {
+  layer_lock_task();
+  // Other tasks...
+}
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
@@ -24,15 +44,14 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case LT(2,KC_ENT):
-        case LT(3,KC_BSPC):
-        case LT(4,KC_DEL):
-        case LT(5,KC_SPC):
-        case LT(6,KC_ESC):
-        case LT(7,KC_0):
-        case LT(7,KC_ENT):
-        case LT(7,KC_MINS):
-        case LT(8,KC_TAB):
+        case LT(3,KC_ENT):
+        case LT(4,KC_BSPC):
+        case LT(5,KC_DEL):
+        case LT(6,KC_SPC):
+        case LT(7,KC_TAB):
+        case LT(8,KC_ESC):
+        case LT(10,KC_0):
+        case LT(10,KC_ENT):
             return false;
         default:
             return true;
