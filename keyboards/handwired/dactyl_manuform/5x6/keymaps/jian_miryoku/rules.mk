@@ -1,0 +1,11 @@
+BACKLIGHT_ENABLE = no
+RGBLIGHT_ENABLE = no
+AUDIO_ENABLE = no
+EXTRAKEY_ENABLE = yes
+MOUSEKEY_ENABLE = yes        # Mouse keys(+4700)
+DYNAMIC_TAPPING_TERM_ENABLE = yes
+STENO_ENABLE = yes
+STENO_PROTOCOL = geminipr
+NKRO_ENABLE = yes
+
+SRC += features/layer_lock.c

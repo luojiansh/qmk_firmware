@@ -52,8 +52,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_FORCE_HOLD
 #define TAPPING_FORCE_HOLD_PER_KEY
 
-#undef DIODE_DIRECTION
-#define DIODE_DIRECTION ROW2COL
-
 // Automatically switch to NKRO.
 #define FORCE_NKRO
+
+#undef DIODE_DIRECTION
+#define DIODE_DIRECTION ROW2COL
