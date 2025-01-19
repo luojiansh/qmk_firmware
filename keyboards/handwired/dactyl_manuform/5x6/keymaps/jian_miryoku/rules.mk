@@ -7,5 +7,7 @@ DYNAMIC_TAPPING_TERM_ENABLE = yes
 STENO_ENABLE = yes
 STENO_PROTOCOL = geminipr
 NKRO_ENABLE = yes
+DEFERRED_EXEC_ENABLE = yes
+VIA_ENABLE = no
 
 SRC += features/layer_lock.c
