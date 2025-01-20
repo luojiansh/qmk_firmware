@@ -471,8 +471,8 @@
     [
       "KC_NO",
       "ANY(UC(0xC4))",
-      "ANY(UC(0xDC))",
       "ANY(UC(0xD6))",
+      "ANY(UC(0xDC))",
       "ANY(UC(0xDF))",
       "KC_NO",
       "QK_BOOT",
