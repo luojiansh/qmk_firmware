@@ -41,9 +41,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Enables This makes it easier for fast typists to use dual-function keys */
 // Don't work with home row mods.
-#ifdef PERMISSIVE_HOLD
-#undef PERMISSIVE_HOLD
-#endif
+//#define PERMISSIVE_HOLD
+#define HOLD_ON_OTHER_KEY_PRESS
 
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define TAPPING_FORCE_HOLD
@@ -52,6 +51,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Automatically switch to NKRO.
 #define FORCE_NKRO
 
-#define UNICODE_SELECTED_MODES UNICODE_MODE_LINUX, UNICODE_MODE_MACOS, UNICODE_MODE_WINDOWS
+#define UNICODE_SELECTED_MODES UNICODE_MODE_LINUX, UNICODE_MODE_MACOS, UNICODE_MODE_WINCOMPOSE
 
 #define UNICODE_CYCLE_PERSIST true

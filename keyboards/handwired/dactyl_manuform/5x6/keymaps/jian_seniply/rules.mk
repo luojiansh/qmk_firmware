@@ -9,6 +9,6 @@ STENO_PROTOCOL = geminipr
 NKRO_ENABLE = yes
 VIA_ENABLE = no
 CAPS_WORD_ENABLE = yes
-UNICODE_ENABLE = yes
+UNICODEMAP_ENABLE = yes
 
 SRC += features/layer_lock.c
